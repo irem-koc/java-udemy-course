@@ -20,6 +20,20 @@ public class Main {
 //        boolean isOkay = true;
         System.out.println("number1 = " + number1);
         System.out.println("char c = " + c);
-
+//        byte b = 127;
+        int a = 800;
+//        b = (byte) a; //explicit conversion - casting
+//        a = b; //implicit conversion
+        System.out.println("a = " + a);
+        byte d = 12;
+        int result = a * d; //type promotions
+        System.out.println("result = " + result);
+        int num1 = 8;
+        int result1 = --num1; //pre-decrement first decrement then assign
+        //post-decrement first assign then decrement
+//        int result2 = num1++;
+        System.out.println("result1 = " + result1 + " num1 = " );
+//        System.out.println("result2 = " + result2);
+//        System.out.println("num1 = " + num1);
     }
 }
