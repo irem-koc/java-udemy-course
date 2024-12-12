@@ -4,6 +4,21 @@ class Human{
     private String name; //instance variable - heap
     private int age;
 
+    //constructor'a özel olacak şekilde type belirtmeye gerek yoktur ve fonksiyon ismi class ismi le aynı olmalıdır.
+    //constructor never returns anything
+    //everytime you create the object the constructor is called
+
+
+    public Human(){ //default constructor, oluşturulmasa da java tarafında default değerler ile oluşturuluyor
+        System.out.println("in constructor");
+        name = "irem";
+        age = 22;
+    }
+    public Human(String name, int age){ //parameterized constructor
+        this.name = name;
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
@@ -39,8 +54,9 @@ class Human{
 public class Encapsulation {
     public static void main(String[] args) {
         Human human = new Human();
-        human.setName("John");
-        human.setAge(20);
+        //human ilk başta oluşturulduğunda değerleri heap'te name null ve age 0 olarak boş obje halinde tutulur
+//        human.setName("John");
+//        human.setAge(20);
 //        human.name = "irem";
 //        human.age = 18;
         // classlara dışarıdan direkt müdahale edilmemek istenir, bu nedenle de private kullanılabilir. Private değişkenler
