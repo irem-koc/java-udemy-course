@@ -1,5 +1,7 @@
 package StreamApi;
 
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 import java.util.Arrays;
 import java.util.List;
@@ -18,5 +20,13 @@ public class StreamAPI {
         //OR we can make all of the filter map reduce in the one line
         int response = list.stream().filter(n->n%2==0).map(n->n*2).reduce(0, (c,e)->c+e);
         System.out.println(response);
+
+        List<Integer> liste = Arrays.asList(4,5,2,3,323,1,22); // way of making list
+        Predicate<Integer> p = n -> n%2==0;
+        Function<Integer,Integer> f = n -> n*2; //<Accepts: Integer, Returns: Integer>
+        int responsee = list.stream().filter(p).map(f).reduce(0, (c,e)->c+e);
+        System.out.println(responsee);
+        Stream<Integer> sorted= liste.stream().filter(p).map(f).sorted();
+        sorted.forEach(a->System.out.println(a));
     }
 }
