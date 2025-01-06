@@ -81,5 +81,9 @@ public class Main {
 //        b.start();
         // in the operating system we have scheduler its job is the define which thread will be run on the cpu
         //in threads we have priority
+
+        //new -> Runnable start() -> Running run() -> Dead stop()
+
+        //Running -> waiting sleep() wait() -> runnable notify
     }
 }
